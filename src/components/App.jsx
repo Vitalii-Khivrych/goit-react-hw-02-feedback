@@ -33,6 +33,10 @@ export class App extends Component {
     return Math.round(result * 100);
   };
 
+  optionsKeys() {
+    return Object.keys(this.state);
+  }
+
   render() {
     const { good, neutral, bad } = this.state;
     const isFeedback = good > 0 || neutral > 0 || bad > 0;
@@ -41,7 +45,7 @@ export class App extends Component {
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={Object.keys(this.state)}
+            options={this.optionsKeys()}
             onLeaveFeedback={this.handleLeaveFeedback}
           />
         </Section>

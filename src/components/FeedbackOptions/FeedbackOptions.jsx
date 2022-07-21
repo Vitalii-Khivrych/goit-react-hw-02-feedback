@@ -20,7 +20,7 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
 }
 
 FeedbackOptions.propTypes = {
-  option: PropTypes.array.isRequired,
+  option: PropTypes.array,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 export default FeedbackOptions;
